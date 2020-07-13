@@ -55,10 +55,7 @@ const Container = styled.div`
     
   onFormSubmit = (event) => {
         event.preventDefault();
-
-        this.props.onSubmit(this.state.team)
-
-        
+        this.props.onSubmit(this.state.team); 
     }
 
     render(){

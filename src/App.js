@@ -8,7 +8,7 @@ import SearchBar from './Component/SearchBar';
 import Header from './Header';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
-import NotFound from './Component/NotFound';
+// import NotFound from './Component/NotFound';
 
 class App extends React.Component{
 

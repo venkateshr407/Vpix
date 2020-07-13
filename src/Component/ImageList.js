@@ -1,19 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 
-
-const Card = styled.div`
-  width:auto;
-  margin:1rem;
-  height:auto;
-  background: #121212;
-
-/* :hover{ */
-  /* background-color: rgb(3, 52, 92); */
-  /* transition: 0.5s  ease-in-out; */
-
-/* } */
-`
 const ImageBox = styled.img`
   width:10;
   object-fit:cover;
@@ -27,8 +14,9 @@ const ImageList = props => {
         return <div className="jumbotron-fluid m-0 p-0">
                     <ImageBox key={id} src={urls.regular} />
                     <div className="jumbotron-fluid m-0 bg-red p-0">
-                    <h1 className="text-desc">{alt_description}</h1>
-                    <h4 className="paralike">likes : {likes}</h4></div>
+                      <h1 className="text-desc">{alt_description}</h1>
+                      <h4 className="paralike">likes : {likes}</h4>
+                    </div>
               </div>   
                 
     });
@@ -36,8 +24,6 @@ const ImageList = props => {
   return(
     <div className="image-content">{images}
    </div>
-   
-
   ); 
 };
 export default ImageList;
