@@ -1,9 +1,6 @@
 *{
     font-family: 'Poppins', sans-serif;
 }
-input{
-    background-color: darkblue;
-}
 .image-content{
     display: flex;
 	flex-direction: row;
@@ -40,13 +37,21 @@ input{
     padding: 0.5rem 0 0.5rem 0;
     font-size: 10px;
     color: honeydew;
+    
+}
+.bg-red{
+    background-color: rgb(61, 61, 61);
+
+    /* margin: 1rem; */
+    padding: 2rem;
+    margin: 0 auto;
 }
 @media screen and (min-width:700px){
     .image-content{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         align-content: center;
     } 

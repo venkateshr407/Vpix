@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Form, FormControl} from 'react-bootstrap';
-import image from '../Images/ootycopy.jpg'
+import image from '../Images/search.jpg'
 
 
 const Container = styled.div`
@@ -53,10 +53,12 @@ const Container = styled.div`
  class SearchBar extends React.Component{
     state = {team:''};
     
-    onFormSubmit = (event) => {
+  onFormSubmit = (event) => {
         event.preventDefault();
 
         this.props.onSubmit(this.state.team)
+
+        
     }
 
     render(){

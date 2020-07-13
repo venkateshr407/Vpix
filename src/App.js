@@ -8,6 +8,8 @@ import SearchBar from './Component/SearchBar';
 import Header from './Header';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
+import NotFound from './Component/NotFound';
+
 class App extends React.Component{
 
   state = {images: [] };
@@ -18,23 +20,36 @@ class App extends React.Component{
       headers:{
         Authorization:'Client-ID nq563ur4SWj9HTF0bhi9D8LU9Fe4eKM_aQVJ6ZsIbgE'
       }
-    });
+      
+    }
+    );
     this.setState({images:response.data.results});
+    // const onSearchSubmit = this.onSearchSubmit;
+    // if(this.response=true){
+    //  return this.setState({images:response.data.results});
+    // } else {
+    //    return this.setState(<NotFound onText="notfound"/>);
+    // }
   }
+  
+  
+
+
 
   render(){
     return(
       <Router>
         <div>    
           <Route exact path="/" component={Header}/>  
-          <Route exact path="/" component={DefaultPage} onSubmit={this.onSearchSubmit}/>
+          <Route exact path="/" component={DefaultPage}/>
         </div>
         <Route  path="/search">     
           <div>
             <Header/>
             <SearchBar onSubmit={this.onSearchSubmit} />   
-               {/* Exploring : {this.state.images.length} images */}
-            <ImageList images={this.state.images}/>
+             {/* {this.state.images.length}  */}
+            <ImageList images={this.state.images} />
+            
           </div>
         </Route>
       </Router>

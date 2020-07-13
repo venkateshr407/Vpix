@@ -1,13 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-// import SearchBar from './Component/SearchBar';
-// import { ReactComponent as Explore } from '../explore.svg';
-// import { ReactComponent as Avatar } from '../avatar.svg';
-// import { ReactComponent as Compass } from '../compass.svg';
  
 const Nav = styled.div`
-  background-color: transparent;
   height: auto;
+  background-color:#500027;
   border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 `;
  
@@ -19,16 +15,10 @@ const NavHeader = styled.div`
   align-items: center;
   margin: 0 auto;
 `;
- 
-const NavLeft = styled.div`
-  width: 33.333%;
-  text-align: left;
-`;
- 
 const Text =styled.h2`
   font-size:16px;
   margin:0;
-  color:black;
+  color:white;
 `;
  
 const NavRight = styled.div`
@@ -40,20 +30,22 @@ const NavRight = styled.div`
   }
 `;
  
-const MenuLink = styled.a``;
+const MenuLink = styled.a`
+  color:white;
+`;
  
 function Header(props) {
   return (
     <Nav>
       <NavHeader>
       <MenuLink href="/">
-        Vpix
+        VPIX
       </MenuLink>
       
  
         <NavRight>
           <MenuLink href="search">
-            <Text>About</Text>
+            <Text>Search</Text>
             {/* <Compass /> */}
           </MenuLink>
         </NavRight>

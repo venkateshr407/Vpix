@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-// import styled from 'styled-components';
 
 
 const Card = styled.div`
@@ -9,20 +8,29 @@ const Card = styled.div`
   height:auto;
   background: #121212;
 
-:hover{
+/* :hover{ */
+  /* background-color: rgb(3, 52, 92); */
+  /* transition: 0.5s  ease-in-out; */
+
+/* } */
+`
+const ImageBox = styled.img`
+  width:10;
+  object-fit:cover;
+  :hover{
   background-color: rgb(3, 52, 92);
   transition: 0.5s  ease-in-out;
-
-}
+  }
 `
 const ImageList = props => {
   const images = props.images.map( ({id, urls, alt_description, likes}) => {
-        return <Card>
-                    <img key={id} src={urls.regular} />
+        return <div className="jumbotron-fluid m-0 p-0">
+                    <ImageBox key={id} src={urls.regular} />
+                    <div className="jumbotron-fluid m-0 bg-red p-0">
                     <h1 className="text-desc">{alt_description}</h1>
-                    <h4 className="paralike">likes : {likes}</h4>
-                    
-                </Card>
+                    <h4 className="paralike">likes : {likes}</h4></div>
+              </div>   
+                
     });
     
   return(
