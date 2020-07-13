@@ -1,6 +1,12 @@
 *{
     font-family: 'Poppins', sans-serif;
+    background-color:#500027;
+    position: relative;
 }
+.bg-none{
+    background-color: transparent;
+}
+
 .image-content{
     display: flex;
 	flex-direction: row;

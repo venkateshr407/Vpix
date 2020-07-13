@@ -44,18 +44,18 @@ const WhichDay = styled.p`
     color:#ffff;
     `;
 const TotalBody = styled.div`
-background-color:#500027;
+
 `
 
  const DefaultPage = () => {
     return(
         <TotalBody>
             <Text className="jumbotron jumbotron-fluid">
-                <div className="container">
-                <WhichDay>{date} {display} {year}</WhichDay>
-                    <h1 className="display-4">Welcome to Vpix</h1>
-                        <p className="lead">A stock photography site.</p>      
-                        <p><a className="btn btn-outline-danger color- btn-lg" href="/search" role="button">Get into search </a>
+                <div className="container bg-transparent " >
+                <WhichDay className="bg-transparent">{date} {display} {year}</WhichDay>
+                    <h1 className="display-4 bg-transparent" style={{color:'#dfad70'}}>Welcome to Vpix</h1>
+                        <p className="lead bg-transparent" style={{color:'#d7ad70'}}>A stock photography site.</p>      
+                        <p className="bg-transparent"><a className="btn btn-outline-danger color- btn-lg " style={{color:'#d7ad70'}}href="/search" role="button">Get into search </a>
                     </p>
                </div>
             </Text> 
@@ -66,7 +66,6 @@ background-color:#500027;
                                 Vpix is a third party project, developed as a project that would not be licenced under Unsplash. 
                     </NomralText>
                 </MessageTitle>
-            
                     <MessageTitle textColor="#D30C2F" className="col-sm mt-2">About
                         <NomralText paraColor="#D30C2F">
                             Vpix is react-project, developing by  
@@ -77,10 +76,9 @@ background-color:#500027;
             <div className="container">
                 <MessageTitle  textColor="#e80c2f" className="col mt-3">Vpix
                     <NomralText paraColor="#D30C2F" className="pb-3">Powered by : Unsplash API</NomralText>
-                    </MessageTitle>
+                </MessageTitle>
             </div>
     </TotalBody>
-        
     );
 }
 export default DefaultPage;
