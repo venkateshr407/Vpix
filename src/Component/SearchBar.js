@@ -24,13 +24,12 @@ const Container = styled.div`
         margin:1rem;
     }
     .input{
-        margin:1rem;
-        background:transparent;
-        color:white;
+        margin:1.5rem 0 0 0;
+        color:black;
         width:60vw;
     }
     .input::placeholder{
-        color:white;
+        color:black;
     }
     `;
  
@@ -60,15 +59,15 @@ const Container = styled.div`
 
     render(){
         return(
-            <Container className="landing-section">
-                    <Form className="form" onSubmit={this.onFormSubmit}>
-                            <Text>Vpix
+            <Container className="landing-section ">
+                    <Form className="form bg-transparent" onSubmit={this.onFormSubmit}>
+                            <Text className="bg-transparent">Vpix
                             </Text>
-                                <Paragraph className="para">Powered by : Unsplash API</Paragraph>
+                                <Paragraph className="para bg-transparent">Powered by : Unsplash API</Paragraph>
                             <div>
                                 <FormControl
                                     className="input"
-                                    style={{color:'white'}}
+                                    style={{color:'black'}}
                                     type="text"
                                     value={this.state.team}
                                     placeholder="Search here"
