@@ -26,7 +26,7 @@ const Container = styled.div`
     .input{
         margin:1.5rem 0 0 0;
         color:black;
-        /* width:auto; */
+        width:100%;
     }
     .input::placeholder{
         color:black;
@@ -63,7 +63,9 @@ const Scroll = styled.h4`
     
   onFormSubmit = (event) => {
         event.preventDefault();
-        this.props.onSubmit(this.state.team); 
+        this.props.onSubmit(this.state.team);
+        window.alert("Scroll Down");
+        
     }
 
     render(){
@@ -83,7 +85,7 @@ const Scroll = styled.h4`
                                     onChange={(e)=> this.setState({team:e.target.value})}
                                 />
                             </div>
-                            <Scroll className="bg-transparent">Scroll down</Scroll>
+                        <Scroll className="bg-transparent"></Scroll>
     
                     </Form>
                   
