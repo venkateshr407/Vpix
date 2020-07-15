@@ -7,6 +7,8 @@ import DefaultPage from './Component/DefaultPage';
 import SearchBar from './Component/SearchBar';
 import Header from './Header';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
+import NotFound from './Component/NotFound';
+
 
 // import NotFound from './Component/NotFound';
 
@@ -22,14 +24,14 @@ class App extends React.Component{
       }
       
     }
+    
     );
-    this.setState({images:response.data.results});
-    // const onSearchSubmit = this.onSearchSubmit;
-    // if(this.response=true){
-    //  return this.setState({images:response.data.results});
-    // } else {
-    //    return this.setState(<NotFound onText="notfound"/>);
-    // }
+    if(response===false){
+      return this.reader({images:response.data.null(<NotFound onText="not forun"/>)})
+  //  return this.setState({images:response.data.results});
+    }else{
+      return this.setState({images:response.data.results});
+    }
   }
   
   
@@ -42,6 +44,7 @@ class App extends React.Component{
         <div>    
           <Route exact path="/" component={Header}/>  
           <Route exact path="/" component={DefaultPage}/>
+          <Route path="*" component={NotFound}/>
         </div>
         <Route  path="/search">     
           <div>

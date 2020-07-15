@@ -26,7 +26,7 @@ const Container = styled.div`
     .input{
         margin:1.5rem 0 0 0;
         color:black;
-        width:60vw;
+        /* width:auto; */
     }
     .input::placeholder{
         color:black;
@@ -49,6 +49,15 @@ const Container = styled.div`
     justify-content:center;
     margin:0 1rem 0rem 1rem;
  `;
+
+const Scroll = styled.h4`
+    color:#fff;
+    font-size:10px;
+    margin-top:5rem;
+    display:flex;
+    justify-content:center;
+`
+
  class SearchBar extends React.Component{
     state = {team:''};
     
@@ -61,7 +70,7 @@ const Container = styled.div`
         return(
             <Container className="landing-section ">
                     <Form className="form bg-transparent" onSubmit={this.onFormSubmit}>
-                            <Text className="bg-transparent">Vpix
+                            <Text className="bg-transparent">vpix
                             </Text>
                                 <Paragraph className="para bg-transparent">Powered by : Unsplash API</Paragraph>
                             <div>
@@ -74,8 +83,12 @@ const Container = styled.div`
                                     onChange={(e)=> this.setState({team:e.target.value})}
                                 />
                             </div>
-
+                            <Scroll className="bg-transparent">Scroll down</Scroll>
+    
                     </Form>
+                  
+                    
+
             </Container>
             
         );

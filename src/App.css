@@ -60,6 +60,9 @@
         justify-content: space-between;
         align-items: center;
         align-content: center;
+    }
+    .input{
+        width:60% ;
     } 
     .Text{
         font-size: 10rem;

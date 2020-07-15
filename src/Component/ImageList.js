@@ -17,8 +17,7 @@ const ImageList = props => {
                       <h1 className="text-desc">{alt_description}</h1>
                       <h4 className="paralike">likes : {likes}</h4>
                     </div>
-              </div>   
-                
+              </div>      
     });
     
   return(

@@ -34,19 +34,16 @@ const MenuLink = styled.a`
   color:white;
 `;
  
-function Header(props) {
+function Header() {
   return (
-    <Nav>
+    <Nav className="container">
       <NavHeader>
       <MenuLink href="/">
         VPIX
       </MenuLink>
-      
- 
-        <NavRight>
+      <NavRight>
           <MenuLink href="search">
             <Text>Search</Text>
-            {/* <Compass /> */}
           </MenuLink>
         </NavRight>
       </NavHeader>
