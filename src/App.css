@@ -1,26 +1,23 @@
 *{
+    margin: 0;
+    padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color:#500027;
-    position: relative;
 }
-.bg-none{
-    background-color: transparent;
-}
-
 .image-content{
     display: flex;
 	flex-direction: row;
-	flex-wrap: wrap;
+    flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+    align-items: center;
     align-content: center;
     background-color: rgb(14, 13, 13);
 }
  img{
     width: 250px;
+    border-radius: 1%;
     height: auto;
-    margin: 2rem 0.5rem 0 0.5rem;
-}
+ }
 .card-img{
     display: flex;
     flex-direction: row;
@@ -52,6 +49,9 @@
     padding: 2rem;
     margin: 0 auto;
 }
+.result{
+    background-color: #0000;
+}
 @media screen and (min-width:700px){
     .image-content{
         display: flex;
@@ -60,6 +60,8 @@
         justify-content: space-between;
         align-items: center;
         align-content: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
     }
     .input{
         width:60% ;

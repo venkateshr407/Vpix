@@ -26,12 +26,8 @@ class App extends React.Component{
     }
     
     );
-    if(response===false){
-      return this.reader({images:response.data.null(<NotFound onText="not forun"/>)})
-  //  return this.setState({images:response.data.results});
-    }else{
-      return this.setState({images:response.data.results});
-    }
+      this.setState({images:response.data.results});
+    
   }
   
   

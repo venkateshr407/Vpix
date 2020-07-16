@@ -3,7 +3,7 @@ import React from 'react';
 
 function NotFound(props) {
     return (
-       <div>{props.onText}</div>
+       <div>{props.onChange}</div>
     );
 }
 export default NotFound;

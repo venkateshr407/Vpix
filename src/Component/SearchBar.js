@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Form, FormControl} from 'react-bootstrap';
-import image from '../Images/search.jpg'
+import image from '../Images/search.jpg';
 
 
 const Container = styled.div`
@@ -50,27 +50,44 @@ const Container = styled.div`
     margin:0 1rem 0rem 1rem;
  `;
 
-const Scroll = styled.h4`
-    color:#fff;
-    font-size:10px;
-    margin-top:5rem;
+
+const Scroll =  styled.div`
     display:flex;
+    align-items:center;
     justify-content:center;
+    margin-top:5rem;
+    color:#fff;
+    background-color:#0000;
 `
+const SearchResult =  styled.div`
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:2rem;
+    text-transform:uppercase;
+    color:#fff;
+    padding-left:2rem;
+    background-color: rgb(14, 13, 13);
+`
+
 
  class SearchBar extends React.Component{
     state = {team:''};
+    state = {name:'Scroll Down'};
     
   onFormSubmit = (event) => {
         event.preventDefault();
-        this.props.onSubmit(this.state.team);
-        window.alert("Scroll Down");
-        
+        this.props.onSubmit(this.state.team);   
+        }
+    onFormLoad = (e) => {
+        e.preventDefault();
+        document.write(this.state.name);
     }
 
     render(){
         return(
-            <Container className="landing-section ">
+            <React.Fragment>
+                <Container className="landing-section ">
                     <Form className="form bg-transparent" onSubmit={this.onFormSubmit}>
                             <Text className="bg-transparent">vpix
                             </Text>
@@ -85,13 +102,13 @@ const Scroll = styled.h4`
                                     onChange={(e)=> this.setState({team:e.target.value})}
                                 />
                             </div>
-                        <Scroll className="bg-transparent"></Scroll>
-    
-                    </Form>
-                  
-                    
-
-            </Container>
+                        <Scroll>{this.state.name}</Scroll>
+                    </Form>  
+            
+                </Container>
+                <SearchResult>{this.state.team}</SearchResult>
+                
+            </React.Fragment>
             
         );
     }
