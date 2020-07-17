@@ -53,20 +53,20 @@ const Badge = styled.img`
                </div>
             </Text> 
             <div className="container row m-auto">
-                <MessageTitle textColor="#e80c2f" className="col-sm mt-5" data-aos="fade-right" data-aos-delay="50"  data-aos-duration="1000">Introducing<br/>
+                <MessageTitle textColor="#e80c2f" className="col-sm mt-5" data-aos="zoom-in" data-aos-delay="50"  data-aos-duration="1000">Introducing<br/>
                 vpix
                     <NomralText paraColor="#D30C2F" >Vpix is a website dedicated to sharing stock photography under the Unsplash API . Vpix is a third party project, developed as a project that would not be licenced under Unsplash.</NomralText>
                 </MessageTitle>
-                <MessageTitle  textColor="#e80c2f" className="col mt-5" data-aos="fade-left" data-aos-delay="50"  data-aos-duration="1000">Fast & Easy 
+                <MessageTitle  textColor="#e80c2f" className="col mt-5" data-aos="zoom-in" data-aos-delay="50"  data-aos-duration="1000">Fast & Easy 
                      <NomralText paraColor="#D30C2F" className="pb-3">Browse the images with flexible, The only Top 10 images can displayed at a time !    </NomralText>  
                 </MessageTitle>
                 
             </div>
             <div className="container row m-auto">
-                <MessageTitle textColor="#e80c2f" className="col-sm mt-5" data-aos="fade-right" data-aos-delay="50"  data-aos-duration="1000"> Vpix
+                <MessageTitle textColor="#e80c2f" className="col-sm mt-5" data-aos="zoom-in" data-aos-delay="50"  data-aos-duration="1000"> Vpix
                    <NomralText paraColor="#D30C2F"> A image search engine <br/>Powered by Unsplash API.</NomralText>
                 </MessageTitle>
-                <MessageTitle  textColor="#e80c2f" className="col-sm mt-5" data-aos="fade-left" data-aos-delay="50"  data-aos-duration="1000">About
+                <MessageTitle  textColor="#e80c2f" className="col-sm mt-5" data-aos="zoom-in" data-aos-delay="50"  data-aos-duration="1000">About
                      <NomralText paraColor="#D30C2F" className="pb-0">Vpix is react-project, developed by Venkatesh</NomralText>
                      <a href="https://dev.to/venkateshr407">
                         <Badge src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Venkatesh.R's DEV Profile"/>
