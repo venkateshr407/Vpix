@@ -66,7 +66,6 @@ const SearchResult =  styled.div`
     font-size:2rem;
     text-transform:uppercase;
     color:#fff;
-    padding-left:2rem;
     background-color: rgb(14, 13, 13);
 `
 
@@ -78,20 +77,14 @@ const SearchResult =  styled.div`
   onFormSubmit = (event) => {
         event.preventDefault();
         this.props.onSubmit(this.state.team);   
-        }
-    onFormLoad = (e) => {
-        e.preventDefault();
-        document.write(this.state.name);
     }
-
     render(){
         return(
             <React.Fragment>
-                <Container className="landing-section ">
+                <Container className="landing-section">
                     <Form className="form bg-transparent" onSubmit={this.onFormSubmit}>
-                            <Text className="bg-transparent">vpix
-                            </Text>
-                                <Paragraph className="para bg-transparent">Powered by : Unsplash API</Paragraph>
+                            <Text className="bg-transparent">vpix</Text>
+                            <Paragraph className="para bg-transparent">Powered by : Unsplash API</Paragraph>
                             <div>
                                 <FormControl
                                     className="input"
@@ -104,10 +97,8 @@ const SearchResult =  styled.div`
                             </div>
                         <Scroll>{this.state.name}</Scroll>
                     </Form>  
-            
                 </Container>
                 <SearchResult>{this.state.team}</SearchResult>
-                
             </React.Fragment>
             
         );

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Montain from '../Images/sunset.png'
-
-// import Image from '../Images/image.png'
+import Montain from '../Images/sunset.png';
 
 const Text = styled.h1`
     font-size:5rem;
@@ -24,7 +22,6 @@ const MessageTitle = styled.div`
     color:${props => props.textColor || "#e80c2f White"};
     font-weight:900;
 `;
-
 const day = new Date().getDay();
 const days = ["Sunday","Monday","Tuesday",
               "Wednesday","Thursday","Friday","Saturday"];
@@ -36,14 +33,18 @@ const WhichDay = styled.p`
     align-items:flex-end;
     font-size:20px;
     margin:0rem 0 1rem 0;
-    color:#D30C2F;
+    color:#ffff;
     `;
+const Badge = styled.img`
+    width:10%;
+`;
+
     
  const DefaultPage = () => {
     return(
         <>
             <Text className="jumbotron jumbotron-fluid">
-                <div className="container bg-transparent" >
+                <div className="container  bg-transparent" >
                 <WhichDay className="bg-transparent" >Hello {display} !</WhichDay>
                     <h1 className="display-4 bg-transparent "  style={{color:'#dfad70'}}>Welcome to Vpix</h1>
                         <p className="lead bg-transparent " style={{color:'#ffff1'}}>A stock photography site.</p>      
@@ -52,18 +53,24 @@ const WhichDay = styled.p`
                </div>
             </Text> 
             <div className="container row m-auto">
-                <MessageTitle textColor="#e80c2f" className="col-sm mt-2">Introducing<br/>
+                <MessageTitle textColor="#e80c2f" className="col-sm mt-5" data-aos="fade-right" data-aos-delay="50"  data-aos-duration="1000">Introducing<br/>
                 vpix
                     <NomralText paraColor="#D30C2F" >Vpix is a website dedicated to sharing stock photography under the Unsplash API . Vpix is a third party project, developed as a project that would not be licenced under Unsplash.</NomralText>
                 </MessageTitle>
-
-                <MessageTitle  textColor="#e80c2f" className="col mt-3">About
-                     <NomralText paraColor="#D30C2F" className="pb-3">Vpix is react-project, developed by Venkatesh</NomralText>
+                <MessageTitle  textColor="#e80c2f" className="col mt-5" data-aos="fade-left" data-aos-delay="50"  data-aos-duration="1000">Fast & Easy 
+                     <NomralText paraColor="#D30C2F" className="pb-3">Browse the images with flexible, The only Top 10 images can displayed at a time !    </NomralText>  
                 </MessageTitle>
+                
             </div>
-            <div className="container">
-                <MessageTitle  textColor="#e80c2f" className="col mt-3">VPIX
-                     <NomralText paraColor="#D30C2F" className="pb-3">Powered by Unsplash API. </NomralText>
+            <div className="container row m-auto">
+                <MessageTitle textColor="#e80c2f" className="col-sm mt-5" data-aos="fade-right" data-aos-delay="50"  data-aos-duration="1000"> Vpix
+                   <NomralText paraColor="#D30C2F"> A image search engine <br/>Powered by Unsplash API.</NomralText>
+                </MessageTitle>
+                <MessageTitle  textColor="#e80c2f" className="col-sm mt-5" data-aos="fade-left" data-aos-delay="50"  data-aos-duration="1000">About
+                     <NomralText paraColor="#D30C2F" className="pb-0">Vpix is react-project, developed by Venkatesh</NomralText>
+                     <a href="https://dev.to/venkateshr407">
+                        <Badge src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Venkatesh.R's DEV Profile"/>
+                    </a>
                 </MessageTitle>
             </div>
     </>

@@ -18,11 +18,10 @@
     border-radius: 1%;
     height: auto;
  }
+ 
 .card-img{
     display: flex;
     flex-direction: row;
-    width: 10vw;
-    height: 5vh;
 }
 .text-desc{
     color: ghostwhite;

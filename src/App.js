@@ -7,10 +7,6 @@ import DefaultPage from './Component/DefaultPage';
 import SearchBar from './Component/SearchBar';
 import Header from './Header';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-import NotFound from './Component/NotFound';
-
-
-// import NotFound from './Component/NotFound';
 
 class App extends React.Component{
 
@@ -40,7 +36,6 @@ class App extends React.Component{
         <div>    
           <Route exact path="/" component={Header}/>  
           <Route exact path="/" component={DefaultPage}/>
-          <Route path="*" component={NotFound}/>
         </div>
         <Route  path="/search">     
           <div>
