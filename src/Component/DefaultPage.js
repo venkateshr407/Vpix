@@ -20,13 +20,6 @@ const Heading = styled.h1`
   align-content: space-around;
   text-align: center;
 `;
-
-const Paragrah = styled.h1`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-`;
 const NomralText = styled.div`
   color: ${(props) => props.paraColor || "#74747 white"};
   font-size: 16px;
