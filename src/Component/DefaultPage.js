@@ -1,12 +1,30 @@
 import React from "react";
 import styled from "styled-components";
-import Montain from "../Images/sunset.png";
+import Montain from "../Images/intro.jpg";
 
 const Text = styled.h1`
   font-size: 5rem;
+  display: flex;
+  align-items: center;
   font-weight: lighter;
   background-image: url(${Montain});
+  height: 100vh;
   background-size: cover;
+`;
+const Heading = styled.h1`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  text-align: center;
+`;
+
+const Paragrah = styled.h1`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #fff;
 `;
 const NomralText = styled.div`
@@ -19,7 +37,7 @@ const NomralText = styled.div`
 const MessageTitle = styled.div`
   font-size: 3rem;
   color: ${(props) => props.textColor || "#e80c2f White"};
-  font-weight: 900;
+  font-weight: 300;
 `;
 const day = new Date().getDay();
 const days = [
@@ -35,11 +53,11 @@ let display = days[day];
 
 const WhichDay = styled.p`
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
+  justify-content: center;
+  align-items: flex-start;
   font-size: 20px;
   margin: 0rem 0 1rem 0;
-  color: #ffff;
+  color: #5d0203;
 `;
 const Badge = styled.img`
   width: 10%;
@@ -51,23 +69,28 @@ const DefaultPage = () => {
       <Text className="jumbotron jumbotron-fluid">
         <div className="container  bg-transparent">
           <WhichDay className="bg-transparent">Hello {display} !</WhichDay>
-          <h1
+          <Heading
             className="display-4 bg-transparent "
-            style={{ color: "#dfad70" }}
+            style={{ color: "#fff" }}
           >
-            Welcome to Vpix
-          </h1>
-          <p className="lead bg-transparent " style={{ color: "#ffff1" }}>
-            A stock photography site.
-          </p>
-          <p className="bg-transparent ">
+            Photos for everyone
+          </Heading>
+          <p
+            className="bg-transparent"
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              color: "#fff",
+            }}
+          >
             <a
-              className="btn btn-outline-danger color- btn-lg "
-              style={{ color: "#ffff" }}
+              type="button"
+              className="btn btn-outline-danger"
+              style={{ color: "white" }}
               href="/search"
-              role="button"
             >
-              Get into search{" "}
+              Get into search
             </a>
           </p>
         </div>
