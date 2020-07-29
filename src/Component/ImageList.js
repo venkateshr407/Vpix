@@ -39,10 +39,6 @@ const ImageList = (props) => {
     );
   });
 
-  return (
-    <>
-      <div className="image-content">{images}</div>
-    </>
-  );
+  return <div className="image-content">{images}</div>;
 };
 export default ImageList;

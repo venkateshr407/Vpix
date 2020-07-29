@@ -28,7 +28,8 @@ img {
   padding: 0.5rem 0.5rem 0 0.5rem;
   display: flex;
   justify-content: center;
-  font-size: 0.6rem;
+  flex-wrap: wrap;
+  font-size: 0.5rem;
   text-transform: uppercase;
   margin: 0;
   font-weight: 100;
@@ -37,18 +38,19 @@ img {
   display: flex;
   justify-content: center;
   padding: 0.5rem 0 0.5rem 0;
-  font-size: 10px;
+  font-size: 9px;
   color: honeydew;
 }
 .bg-red {
   background-color: rgb(61, 61, 61);
-
-  /* margin: 1rem; */
   padding: 2rem;
   margin: 0 auto;
 }
 .result {
   background-color: #0000;
+}
+a {
+  color: white;
 }
 @media screen and (min-width: 700px) {
   .image-content {

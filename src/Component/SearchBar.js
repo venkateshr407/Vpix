@@ -80,7 +80,11 @@ class SearchBar extends React.Component {
       <React.Fragment>
         <Container className="landing-section">
           <Form className="form bg-transparent" onSubmit={this.onFormSubmit}>
-            <Text className="bg-transparent">vpix</Text>
+            <Text className="bg-transparent">
+              <a style={{ color: "white" }} href="/">
+                vpix
+              </a>
+            </Text>
             <Paragraph className="para bg-transparent">
               Powered by : Unsplash API
             </Paragraph>

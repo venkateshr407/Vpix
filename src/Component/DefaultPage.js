@@ -23,6 +23,7 @@ const Heading = styled.h1`
   align-content: space-around;
   text-align: center;
   font-weight: 900;
+  font-size: 4rem;
 `;
 const NomralText = styled.div`
   color: ${(props) => props.paraColor || "#74747 white"};
@@ -55,7 +56,6 @@ const WhichDay = styled.p`
   font-size: 20px;
   margin: 0rem 0 1rem 0;
   color: #fff;
-  font-weight: 900;
 `;
 const Badge = styled.img`
   width: 10%;

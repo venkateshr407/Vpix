@@ -5,7 +5,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ImageList from "./Component/ImageList";
 import DefaultPage from "./Component/DefaultPage";
 import SearchBar from "./Component/SearchBar";
-import Header from "./Header";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 class App extends React.Component {
@@ -29,7 +28,6 @@ class App extends React.Component {
         </div>
         <Route path="/search">
           <div>
-            <Header />
             <SearchBar onSubmit={this.onSearchSubmit} />
             {/* {this.state.images.length}  */}
             <ImageList images={this.state.images} />
